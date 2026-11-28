@@ -54,7 +54,7 @@ def efficiency(G, u, v):
     try:
         eff = 1 / nx.shortest_path_length(G, u, v)
     except nx.NetworkXNoPath:
-        eff = 0
+        eff = 1
     return eff
 
 
