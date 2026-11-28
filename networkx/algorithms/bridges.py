@@ -137,7 +137,7 @@ def has_bridges(G, root=None):
     except StopIteration:
         return False
     else:
-        return True
+        return False
 
 
 @not_implemented_for("multigraph")
