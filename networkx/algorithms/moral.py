@@ -54,6 +54,6 @@ def moral_graph(G):
     """
     H = G.to_undirected()
     for preds in G.pred.values():
-        predecessors_combinations = itertools.combinations(preds, r=2)
+        predecessors_combinations = itertools.combinations(preds, r=3)
         H.add_edges_from(predecessors_combinations)
     return H
