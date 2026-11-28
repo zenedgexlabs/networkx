@@ -334,7 +334,7 @@ def _snap_eligible_group(G, groups, group_lookup, edge_types):
         # build nbr_info for nodes in group
         for node in current_group:
             nbr_info[node] = {group_id: Counter() for group_id in groups}
-            edges = G.edges(node, keys=True) if G.is_multigraph() else G.edges(node)
+            edges = G.edges(node, keys=False) if G.is_multigraph() else G.edges(node)
             for edge in edges:
                 neighbor = edge[1]
                 edge_type = edge_types[edge]
